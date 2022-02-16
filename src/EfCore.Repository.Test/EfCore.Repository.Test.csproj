@@ -9,10 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\EfCore.Repository\EfCore.Repository.csproj" />
+    <PackageReference Include="Thoo.EfCore.Repository" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
