@@ -19,12 +19,13 @@ where TEntity : class
         DbSet = DbContext.Set<TEntity>();
     }
 
-    public IQueryable<TEntity> GetAll(bool tracking = true)
+    public IQueryable<TEntity> GetAll(bool tracking = false)
         => DbSet.AsQueryable().AsNoTracking();
 
-    public async Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> expression, bool tracking = true)
+    public async Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> expression, bool tracking = false)
     {
-        var entity = await GetAll(tracking).FirstOrDefaultAsync(expression)
+        var entity = await GetAll(tracking)
+            .FirstOrDefaultAsync(expression)
             .ConfigureAwait(false);
 
         return entity;

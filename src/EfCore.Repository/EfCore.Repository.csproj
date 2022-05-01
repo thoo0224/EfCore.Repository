@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Description>.NET 6 Repository librart for Entity Framework Core</Description>
+    <Description>.NET 6 Repository library for Entity Framework Core</Description>
     <PackageProjectUrl>https://github.com/thoo0224/EfCore.Repository</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -13,6 +13,7 @@
     <PackageTags>Entity Framework, Entity Framework Core, Repository, EFCore</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageId>Thoo.EfCore.Repository</PackageId>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
