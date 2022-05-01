@@ -20,12 +20,7 @@ where TEntity : class
     }
 
     public IQueryable<TEntity> GetAll(bool tracking = true)
-    {
-        var queryable = DbSet.AsQueryable();
-        return tracking
-            ? queryable
-            : queryable.AsNoTracking();
-    }
+        => DbSet.AsQueryable().AsNoTracking();
 
     public async Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> expression, bool tracking = true)
     {
