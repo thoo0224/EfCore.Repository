@@ -11,11 +11,11 @@ public static class RepositoryExt
     IReadOnlyRepository<TEntity> CreateDefaultReadOnly<TEntity>();
      */
 
-    public static Repository<TEntity> CreateDefault<TEntity>(this IRepositoryFactory factory)
+    public static IRepository<TEntity> CreateDefault<TEntity>(this IRepositoryFactory factory)
     where TEntity : class
         => factory.Create<Repository<TEntity>>();
 
-    public static ReadOnlyRepository<TEntity> CreateDefaultReadOnly<TEntity>(this IRepositoryFactory factory)
+    public static IReadOnlyRepository<TEntity> CreateDefaultReadOnly<TEntity>(this IRepositoryFactory factory)
         where TEntity : class
         => factory.Create<ReadOnlyRepository<TEntity>>();
 
